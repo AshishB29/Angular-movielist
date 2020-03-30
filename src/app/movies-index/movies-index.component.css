@@ -1,0 +1,23 @@
+.center
+{
+    margin: 0%; padding: 0%;
+    text-align: center;
+}
+
+.button-container form,
+.button-container div {
+    display: inline;
+    
+}
+.button-container button
+{
+    display: inline;
+    vertical-align: middle;
+    background-color:blue;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px red;
+    font-family: "Arial";
+    font-size: 100%;
+    color: White;
+}

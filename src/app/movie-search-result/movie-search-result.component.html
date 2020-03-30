@@ -1,0 +1,47 @@
+<br>
+     <div>
+        <div class="row">
+          <div *ngIf="moviesService.getSharedSearchResult().length>0"> 
+          <div *ngFor="let movie of moviesService.getSharedSearchResult(), let i = index">
+            <div *ngIf="i>=(movieIndex.pageindex-1)*5 && i<movieIndex.pageindex*5">
+                <img *ngIf="movie.poster_path"   height="150px" width="100px" class="img-thumbnail" src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="Image Not Available">
+                <img *ngIf="!movie.poster_path" class="img-thumbnail" height="150px" width="100px" src="" alt="Image not Available">
+                <h4 class="text-center" >{{movie.title}}
+                <br>
+                <strong>Rating: </strong><b>{{movie.vote_average}}</b>
+              </h4>
+              <div class="description">
+                <b><u>Overview</u>: </b>{{movie.overview}}  
+              </div>
+              <br>
+            </div>
+          </div>
+          </div>
+
+          
+      <div class="center">
+        <div class="button-container">
+          <span *ngIf="movieIndex.pageindex>1">
+            <form (submit)="previouspage()">
+              <button class="btn btn-default search-button" style="width: 90px; height: 25px" type="submit"><b>Previous</b></button>
+            </form>
+          </span>
+        
+          <span *ngIf="(movieIndex.pageindex)*5<movieIndex.movie_count">
+            <form (submit)="nextpage()">
+              <button class="btn btn-default search-button" style="width: 90px; height: 25px;" type="submit" ><b>Next</b></button>
+            </form>
+          </span>
+        </div>
+      </div>
+
+
+          <div *ngIf="moviesService.getSharedSearchResult().length==0">
+            <h1>Zero Result:
+             </h1>
+          </div> 
+        
+        </div>
+      </div>
+    
+  

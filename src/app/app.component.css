@@ -1,0 +1,21 @@
+
+.toolbar
+{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    color: white;
+    font-weight: 600px;
+    font-family: serif;
+    text-emphasis-color: green;
+    font-size: 20px;
+    justify-content: center;
+}
+.shade
+{
+    text-shadow:3px 3px 2px black, 5px 5px 5px red, 5px 5px 6px green;
+    
+}
+
+
